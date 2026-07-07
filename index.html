@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Steven Cheong portfolio: finance, AI media, data intelligence, automation, and product apps."
+    />
+    <meta name="theme-color" content="#111827" />
+    <meta property="og:title" content="Steven Cheong | App Portfolio" />
+    <meta
+      property="og:description"
+      content="A focused portfolio of shipped apps, prototypes, automation systems, and product foundations."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/portfolio-hero.png" />
+    <title>Steven Cheong | App Portfolio</title>
+    <link rel="preload" href="assets/portfolio-hero.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-site-header>
+      <a class="brand-mark" href="#top" aria-label="Steven Cheong portfolio home">
+        <span class="brand-mark__glyph">SC</span>
+        <span>
+          <strong>Steven Cheong</strong>
+          <span>App Portfolio</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <picture class="hero__image" aria-hidden="true">
+          <img src="assets/portfolio-hero.png" alt="" />
+        </picture>
+        <div class="hero__scrim"></div>
+        <div class="hero__content">
+          <p class="eyebrow">Full-stack app builder in Melbourne</p>
+          <h1 id="hero-title">Steven Cheong App Portfolio</h1>
+          <p class="hero__lede">
+            Finance-grade thinking, product-speed execution, and practical
+            software across AI media, data intelligence, document automation,
+            and market tooling.
+          </p>
+          <div class="hero__actions" aria-label="Portfolio actions">
+            <a class="button button--primary" href="#projects">View apps</a>
+            <a class="button button--ghost" href="https://github.com/Tichubrothers" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </div>
+          <dl class="hero__stats" aria-label="Portfolio highlights">
+            <div>
+              <dt>Domains</dt>
+              <dd>5</dd>
+            </div>
+            <div>
+              <dt>Selected builds</dt>
+              <dd>8</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Apps that solve real workflows</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section section--intro" aria-labelledby="intro-title">
+        <div class="section__inner intro-grid">
+          <div>
+            <p class="eyebrow">What this portfolio shows</p>
+            <h2 id="intro-title">Product judgment backed by working code.</h2>
+          </div>
+          <p>
+            The projects below are selected to help an employer quickly assess
+            scope, technical range, and delivery style. Each card opens into a
+            concise case study with stack, implementation evidence, and what to
+            inspect next.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--projects" id="projects" aria-labelledby="projects-title">
+        <div class="section__inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Selected work</p>
+              <h2 id="projects-title">Apps, systems, and product foundations</h2>
+            </div>
+            <button class="button button--secondary" type="button" data-copy-summary>
+              Copy CV summary
+            </button>
+          </div>
+
+          <div class="portfolio-tools" aria-label="Project filters">
+            <label class="search-field">
+              <span class="search-field__icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Search projects</span>
+              <input
+                type="search"
+                data-search
+                placeholder="Search projects or stack"
+                autocomplete="off"
+              />
+            </label>
+            <div class="filter-row" data-filters aria-label="Filter by domain"></div>
+          </div>
+
+          <div class="project-count" data-project-count aria-live="polite"></div>
+          <div class="projects-grid" data-projects></div>
+        </div>
+      </section>
+
+      <section class="section section--evidence" id="evidence" aria-labelledby="evidence-title">
+        <div class="section__inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Hiring signal</p>
+              <h2 id="evidence-title">Where the work is strongest</h2>
+            </div>
+          </div>
+          <div class="evidence-grid">
+            <article>
+              <h3>Product systems</h3>
+              <p>
+                Converts messy workflows into structured routes, dashboards,
+                data models, and operational checks.
+              </p>
+            </article>
+            <article>
+              <h3>Finance and risk logic</h3>
+              <p>
+                Comfortable with LVR, ICR, cash-flow, lease, payment, consent,
+                and readiness concepts.
+              </p>
+            </article>
+            <article>
+              <h3>Automation depth</h3>
+              <p>
+                Builds crawlers, provider adapters, media pipelines, backtests,
+                queueable jobs, and export surfaces.
+              </p>
+            </article>
+            <article>
+              <h3>Employer-ready communication</h3>
+              <p>
+                Presents tradeoffs clearly, distinguishes production boundaries,
+                and leaves systems inspectable.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--timeline" aria-labelledby="timeline-title">
+        <div class="section__inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Build pattern</p>
+              <h2 id="timeline-title">How I tend to ship</h2>
+            </div>
+          </div>
+          <div class="timeline">
+            <article>
+              <span>01</span>
+              <h3>Model the workflow</h3>
+              <p>Start with entities, decision points, user roles, and evidence needed for real use.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Build a useful surface</h3>
+              <p>Prioritize dashboards, forms, filters, import/export, and operator feedback loops.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Connect the hard parts</h3>
+              <p>Add adapters, APIs, crawlers, AI providers, job queues, and validation boundaries.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Make it explainable</h3>
+              <p>Document limits, next integrations, tests, and the path from prototype to production.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+        <div class="section__inner contact-band">
+          <div>
+            <p class="eyebrow">Available for the next conversation</p>
+            <h2 id="contact-title">Want the short version for a role?</h2>
+            <p>
+              I can walk through any project, explain the architecture, and discuss
+              how the same approach applies to a business analyst, product, data,
+              automation, or software delivery role.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button--primary" href="mailto:tichubrothers@gmail.com">Email Steven</a>
+            <a class="button button--secondary" href="https://github.com/Tichubrothers" target="_blank" rel="noreferrer">
+              GitHub profile
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="case-dialog" data-dialog>
+      <button class="dialog-close" type="button" data-close-dialog aria-label="Close case study"></button>
+      <article data-dialog-content></article>
+    </dialog>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+    <script src="scripts.js" defer></script>
+  </body>
+</html>
