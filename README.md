@@ -2,6 +2,8 @@
 
 A static GitHub Pages portfolio for showcasing selected apps and systems to employers.
 
+Live portfolio: https://tichubrothers.github.io/portfolio/
+
 ## Files
 
 - `index.html` contains the page structure and metadata.

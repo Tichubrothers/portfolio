@@ -1,210 +1,164 @@
 const profile = {
   name: "Steven Cheong",
   email: "tichubrothers@gmail.com",
+  portfolio: "https://tichubrothers.github.io/portfolio/",
   github: "https://github.com/Tichubrothers",
   summary:
-    "Steven Cheong builds full-stack apps across finance workflows, AI media, data intelligence, document automation, and market tooling. Recent work includes property cash-flow modelling, banking product foundations, AI video generation pipelines, PDF/OCR browser tooling, market intelligence dashboards, stock availability crawlers, and quantitative backtesting.",
+    "Steven Cheong builds practical software across property finance, automated content generation, B2B lead generation, trading automation, blockchain commerce, and cross-platform mobile apps.",
 };
 
 const projects = [
   {
-    title: "PropertyFinance",
+    title: "Property Finance App",
     domain: "Finance",
     tone: "finance",
-    status: "Product prototype",
+    status: "Serviceability modelling",
+    aiAssisted: true,
     summary:
-      "A property portfolio analysis app for modelling assets, tenants, loans, cash flow, and lender-style risk metrics.",
+      "A Next.js and TypeScript modelling tool for securities, tenants, loan facilities, and group portfolios.",
     impact:
-      "Turns fragmented property, lease, and debt information into scenario-ready finance views.",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind", "Financial modelling"],
+      "Enhances financial analysis by reducing spreadsheet-heavy serviceability and cash-flow work from hours to minutes.",
+    stack: ["Next.js", "TypeScript", "React", "Serviceability", "Cash-flow modelling"],
     links: [{ label: "View code", href: "https://github.com/Tichubrothers/property-financing-app" }],
     problem:
-      "Property finance reviews need structured asset, tenant, lease, and loan data before decision makers can reason about risk.",
+      "Sophisticated property serviceability and cash-flow analysis can become slow and limited when handled entirely in Microsoft Excel.",
     built: [
-      "Portfolio, subgroup, property, tenant, and loan entities with editable state.",
-      "Metrics for LVR, ICR, SICR, WALE, WALT, TAE/XTV, debt-to-income, NOI, and yield.",
-      "Cash-flow projections with sensitivity, deductions growth, financial-year options, pro-rata handling, and loan repayment logic.",
-      "Operator-style dashboard tables that expand from summary metrics into tenant and property detail.",
+      "Built a Next.js and TypeScript application for modelling securities, tenants, loan facilities, and group portfolios.",
+      "Implemented flexible cash-flow projection logic for rental growth, vacancy and let-up periods, adjustable incentives, and multiple loan repayment types.",
+      "Automated key lending metrics with scenario controls for sensitivity and pro-rata analysis.",
+      "Created a faster workflow for analysis that would otherwise rely on manual spreadsheet modelling.",
     ],
     inspect: [
-      "Financial model functions in `src/lib/advancedMetrics.ts` and cash-flow generation.",
-      "Dashboard state and projection controls in `src/components/Dashboard.tsx`.",
-      "Domain types for properties, tenants, loans, incentives, and adjustments.",
+      "Property, tenant, loan, and group portfolio data structures.",
+      "Cash-flow projection logic and loan repayment handling.",
+      "Sensitivity, pro-rata, and lending metric controls.",
     ],
   },
   {
-    title: "VibeBank",
-    domain: "Finance",
-    tone: "finance",
-    status: "Production-shaped foundation",
-    summary:
-      "A banking product foundation with signed sessions, protected routes, persisted workspace state, CDR-style consent, and PayTo-style payment surfaces.",
-    impact:
-      "Shows how a regulated workflow can be decomposed into auth, domain state, provider boundaries, audit activity, and readiness checks.",
-    stack: ["Next.js 16", "React 19", "TypeScript", "Auth", "Provider adapters"],
-    links: [],
-    problem:
-      "Financial product demos often look polished but lack the bones needed for real integrations, protected workflows, and operator readiness.",
-    built: [
-      "Owner registration, login, logout, signed httpOnly sessions, and protected dashboard/settings routes.",
-      "File-backed workspace persistence for accounts, transactions, consents, payments, agreements, audit events, and business profile data.",
-      "Mock Australian banking adapter shaped around CDR-style account data and PayTo-style payments.",
-      "Readiness surfaces that separate sandbox completeness from live integration requirements.",
-    ],
-    inspect: [
-      "Authentication and session handling in `lib/auth.ts`.",
-      "Persistence boundary in `lib/database.ts` and workspace services in `lib/store.ts`.",
-      "Mock provider adapter and readiness/audit surfaces.",
-    ],
-  },
-  {
-    title: "VidsToSocials",
-    domain: "AI Media",
+    title: "AFL Arena",
+    domain: "Social Automation",
     tone: "ai",
-    status: "End-to-end generator",
+    status: "Automated content account",
+    aiAssisted: true,
     summary:
-      "A vertical video generation system that turns topics or fixed scripts into voiceover, images, subtitles, thumbnails, metadata, and social-ready video output.",
+      "A fully automated AFL social media account that generates and posts Remotion-based content.",
     impact:
-      "Combines AI providers, media composition, job inspection, and publishing workflow controls in one creator pipeline.",
-    stack: ["Python", "FastAPI", "Next.js", "FFmpeg", "Edge TTS", "OpenAI", "ComfyUI"],
-    links: [{ label: "View code", href: "https://github.com/Tichubrothers/vidstosocials" }],
+      "Turns public AFL data into repeatable video content that can be rendered and published automatically.",
+    stack: ["Remotion", "React", "Public APIs", "Playwright", "Social automation"],
+    links: [{ label: "TikTok", href: "https://www.tiktok.com/@afl.arena" }],
     problem:
-      "Short-form video creation has many manual steps: scripting, asset generation, voice, captions, music, metadata, thumbnails, rendering, and posting.",
+      "Running a sports content account manually requires repeated data collection, video assembly, rendering, and posting.",
     built: [
-      "Topic and fixed-script generation modes with per-job provider overrides.",
-      "Scene or sentence-level image splitting, vertical framing, subtitle presets, color controls, and caption options.",
-      "Backend CLI and API surfaces for generation, status, voices, login/logout, and posting targets.",
-      "Completed-job inspector for generated resources, request parameters, edits, and reruns.",
+      "Built an automated AFL content workflow using public API data.",
+      "Generated sports videos with Remotion templates.",
+      "Automated publishing to social media accounts using Playwright scripts.",
+      "Designed the account to run as a repeatable content system rather than a manual editing workflow.",
     ],
     inspect: [
-      "Python package entry point and CLI command surface.",
-      "FastAPI job orchestration and provider configuration.",
-      "Frontend controls for generation settings and job review.",
+      "Public data ingestion and video data mapping.",
+      "Remotion render templates and content generation logic.",
+      "Playwright automation for social posting.",
     ],
   },
   {
-    title: "Formachello PDF Tools",
-    domain: "Automation",
+    title: "B2B Leads Generator",
+    domain: "Lead Generation",
     tone: "automation",
-    status: "Browser-first toolkit",
+    status: "Data pipeline and UI",
+    aiAssisted: true,
     summary:
-      "A private-by-default PDF utility suite with merge, split, rotate, extract, OCR, conversion, watermarking, signing, redaction, and auto-fill concepts.",
+      "A lead-generation system that collects, parses, stores, and serves daily B2B opportunities across Australia.",
     impact:
-      "Targets high-frequency document work with local processing and a broad tool surface.",
-    stack: ["Next.js", "React", "pdf-lib", "pdfjs-dist", "Tesseract.js", "OCR"],
-    links: [{ label: "View code", href: "https://github.com/Tichubrothers/formachello" }],
+      "Generates hundreds of daily business leads and makes them usable from a local SQL-backed frontend workflow.",
+    stack: ["Automation", "SQL", "APIs", "Data parsing", "Frontend UI"],
+    links: [],
     problem:
-      "Document workflows often force users into upload-heavy tools for simple operations that can run locally in the browser.",
+      "Finding new B2B opportunities across Australia is time-consuming when raw data is scattered across multiple public sources.",
     built: [
-      "Organized tool catalogue across page operations, conversion, security, editing, annotation, and smart tools.",
-      "Client-side PDF processing dependencies for document manipulation and OCR.",
-      "Searchable, categorized interface for fast access to common PDF actions.",
-      "Privacy positioning that keeps document work on the user device where possible.",
+      "Built automated collection workflows that pull raw lead data from multiple sources.",
+      "Developed custom techniques for sources with anti-bot and Google reCAPTCHA constraints.",
+      "Parsed and normalised raw data into a local SQL database.",
+      "Exposed the lead database through an API and frontend UI for daily use.",
     ],
     inspect: [
-      "Tool catalogue in `app/page.js`.",
-      "Component structure around tool cards and PDF action modules.",
-      "Dependency choices for PDF parsing, generation, zipping, and OCR.",
+      "Source collection and parsing workflow.",
+      "SQL schema and lead normalisation process.",
+      "API and frontend workflow for reviewing opportunities.",
     ],
   },
   {
-    title: "Data-centre Project Tracker",
-    domain: "Data Intelligence",
+    title: "CFD Trading Bots",
+    domain: "Trading Automation",
     tone: "data",
-    status: "Market intelligence dashboard",
+    status: "Quant and arbitrage systems",
     summary:
-      "A local intelligence dashboard for tracking Australian data-centre projects across planning, grid, contractor, energy, community, and water signals.",
+      "Quantitative and arbitrage trading bots using Node.js, Microsoft Excel, MetaTrader 5, and .MQL5 scripts.",
     impact:
-      "Packages fragmented market signals into filters, opportunity scores, project detail, notes, and exportable pipeline views.",
-    stack: ["Vite", "React 19", "TypeScript", "Playwright", "CSV export", "API ingest"],
+      "Uses automation and real-time data from multiple sources to identify and execute market inefficiency opportunities.",
+    stack: ["Node.js", "MS Excel", ".MQL5", "MetaTrader 5", "Web scraping"],
     links: [],
     problem:
-      "Project intelligence is spread across planning portals, council alerts, grid documents, jobs boards, and supplier signals.",
+      "Manual trading and arbitrage monitoring cannot react quickly enough to price movements across exchanges, markets, and sports books.",
     built: [
-      "Filterable pipeline by state, stage, signal type, buyer segment, score, and risk.",
-      "Opportunity scoring for subcontractors, recruiters, property teams, and suppliers.",
-      "Project detail panel with constraints, buyer angles, risk watch, timeline, and private notes.",
-      "Live-data ingest shell for Adzuna job signals and PlanningAlerts council signals.",
+      "Developed a quantitative trading algorithm that was backtested in Microsoft Excel and traded through MetaTrader 5 using .MQL5 scripts.",
+      "Built a Node.js arbitrage application that scrapes centralised exchange and prediction-market data to identify opportunities during volatile price movements.",
+      "Created a sports arbitrage data-mining bot hosted on Google Cloud Functions.",
+      "Stored real-time betting data in a cloud database for downstream analysis and execution logic.",
     ],
     inspect: [
-      "Project data model and scoring utilities.",
-      "Live-data manifest and ingest script design.",
-      "Dashboard filters, notes, and export workflow.",
+      "Backtesting workflow and assumptions.",
+      "Exchange, prediction-market, and sports-book data ingestion.",
+      "Execution logic and cloud-hosted arbitrage data pipeline.",
     ],
   },
   {
-    title: "TCG Stock Finder",
-    domain: "Automation",
-    tone: "automation",
-    status: "Retail data crawler",
+    title: "SquidNFTGame.io",
+    domain: "Blockchain",
+    tone: "blockchain",
+    status: "Launched NFT website",
     summary:
-      "A stock-checking and product-intelligence crawler for Big W trading-card availability using public store and availability data.",
+      "A full-stack React website retailing 4,560 unique NFT artworks through blockchain integrations.",
     impact:
-      "Converts hidden product identifiers and store availability into state-level stock tables and CSV/JSON outputs.",
-    stack: ["Python", "curl_cffi", "Retail APIs", "CSV", "JSON", "CLI"],
-    links: [],
+      "Delivered a responsive NFT retail experience with Solana blockchain querying and transaction support.",
+    stack: ["React", "Solana", "Blockchain APIs", "AWS S3", "CloudFront", "Route 53"],
+    links: [{ label: "Live site", href: "https://www.squidnftgame.io" }],
     problem:
-      "Retail product search can hide new-release or in-store-only items even when availability data exists behind the frontend.",
+      "NFT projects need a responsive storefront that can present artwork, connect to blockchain data, and support cryptocurrency transactions.",
     built: [
-      "Store list retrieval and availability checks against Big W endpoints.",
-      "Browser impersonation profile for requests that normal curl or Node requests cannot access.",
-      "Search, direct lookup, narrow article-number scanning, product-code lookup, filtering, CSV, JSON, and raw JSON outputs.",
-      "Distributor/source research flow for identifying GTIN, SKU, MPN, and set-code candidates.",
+      "Developed and launched a React website for 4,560 unique NFT artworks.",
+      "Built a responsive interface for desktop and mobile platforms.",
+      "Integrated APIs for querying and transacting with NFTs on the Solana blockchain network.",
+      "Deployed the site on AWS using S3 web hosting, CloudFront, and Route 53.",
     ],
     inspect: [
-      "CLI commands for search, lookup, scanning, and stock table generation.",
-      "Rate-aware crawler behavior and output filters.",
-      "Source catalogue for official and distributor product identifiers.",
+      "Responsive React storefront structure.",
+      "Solana blockchain API integrations.",
+      "AWS static hosting, CDN, and DNS deployment setup.",
     ],
   },
   {
-    title: "ICT FVG Backtester",
-    domain: "Data Intelligence",
-    tone: "data",
-    status: "Quant research project",
+    title: "iOS & Android Mobile Apps",
+    domain: "Mobile Apps",
+    tone: "mobile",
+    status: "Published apps",
     summary:
-      "A Bybit BTCUSDT strategy research project with event-driven backtesting, walk-forward optimization, fees, slippage, and drawdown reporting.",
+      "A range of cross-platform utility apps and arcade games published on the Apple App Store and Google Play Store.",
     impact:
-      "Shows disciplined experimentation, explicit assumptions, and reproducible artifacts rather than a black-box trading claim.",
-    stack: ["Python", "Bybit v5", "Backtesting", "Optimization", "CSV", "Charts"],
+      "Demonstrates mobile product delivery, monetisation, and game development across React Native and Unity.",
+    stack: ["React Native", "Unity", "iOS", "Android", "Google AdMob"],
     links: [],
     problem:
-      "Trading ideas are easy to overfit unless execution assumptions, walk-forward splits, fees, slippage, and caveats are made explicit.",
+      "Mobile users expect simple, reliable utility apps and engaging casual games that perform well across both major app stores.",
     built: [
-      "ICT fair-value-gap strategy rules with HTF bias, LTF signal, BOS, ATR filters, retrace entry, stop, and target logic.",
-      "Event-driven backtester with conservative intrabar stop-first handling, fees, slippage, risk, and leverage cap.",
-      "Grid search across 3,456 configs with walk-forward train/test split.",
-      "Reproducible results artifacts including equity curve, trades CSV, and summary JSON.",
+      "Developed a suite of utility apps primarily using React Native.",
+      "Published applications on both the Apple App Store and Google Play Store.",
+      "Implemented revenue-generation strategies through Google AdMob monetisation.",
+      "Designed and published 2D and 3D arcade games using the Unity engine.",
     ],
     inspect: [
-      "Strategy construction in `strategy.py`.",
-      "Bybit data fetcher and local cache.",
-      "Optimization and final result scripts plus generated artifacts.",
-    ],
-  },
-  {
-    title: "MediaCrawler Suite",
-    domain: "Automation",
-    tone: "automation",
-    status: "Crawler and bot tooling",
-    summary:
-      "A set of crawler and automation projects around media collection, lead discovery, market monitoring, and messaging workflows.",
-    impact:
-      "Demonstrates comfort with practical automation: scraping constraints, data extraction, messaging hooks, and repeatable scripts.",
-    stack: ["Python", "Node.js", "Scraping", "Bots", "APIs", "Automation"],
-    links: [],
-    problem:
-      "Manual data collection is slow, fragile, and hard to repeat when source sites, messaging channels, or market signals change.",
-    built: [
-      "Crawler-oriented codebases for media and lead collection.",
-      "Bot workflows for market monitoring and operational alerts.",
-      "Scriptable utilities that can be run locally and adapted to new sources.",
-      "Reusable patterns for request handling, parsing, storage, and notification boundaries.",
-    ],
-    inspect: [
-      "Crawler projects under local `001-Proj` and `002-BOTS` directories.",
-      "README-led setup for source-specific scripts.",
-      "Messaging and alert integration points.",
+      "Cross-platform app architecture and deployment process.",
+      "App Store and Google Play publishing workflow.",
+      "AdMob monetisation and Unity game delivery.",
     ],
   },
 ];
@@ -247,6 +201,7 @@ function projectMatches(project) {
     project.summary,
     project.impact,
     project.stack.join(" "),
+    project.aiAssisted ? "AI assisted" : "",
     project.problem,
     project.built.join(" "),
   ]
@@ -287,7 +242,10 @@ function renderProjects() {
           <div class="project-card__visual" aria-hidden="true"></div>
           <div class="project-card__body">
             <div class="project-card__topline">
-              <span class="project-card__badge">${escapeHtml(project.domain)}</span>
+              <div class="project-card__badges">
+                <span class="project-card__badge">${escapeHtml(project.domain)}</span>
+                ${project.aiAssisted ? '<span class="project-card__badge project-card__badge--ai">AI-assisted</span>' : ""}
+              </div>
               <span class="project-card__meta">${escapeHtml(project.status)}</span>
             </div>
             <h3>${escapeHtml(project.title)}</h3>
@@ -350,6 +308,14 @@ function renderCaseStudy(project) {
             <dt>Status</dt>
             <dd>${escapeHtml(project.status)}</dd>
           </div>
+          ${
+            project.aiAssisted
+              ? `<div>
+                  <dt>AI assistance</dt>
+                  <dd>Developed with assistance from ChatGPT 5.4, ChatGPT 5.5, and/or Claude Opus 4.6.</dd>
+                </div>`
+              : ""
+          }
           <div>
             <dt>Impact</dt>
             <dd>${escapeHtml(project.impact)}</dd>
@@ -391,12 +357,16 @@ function showToast(message) {
   }, 2500);
 }
 
+function updateHeaderState() {
+  elements.header.classList.toggle("is-scrolled", window.scrollY > 20);
+}
+
 async function copySummary() {
   const featuredProjects = projects
     .slice(0, 6)
     .map((project) => `${project.title}: ${project.summary}`)
     .join("\n");
-  const text = `${profile.summary}\n\nSelected projects:\n${featuredProjects}\n\nGitHub: ${profile.github}\nEmail: ${profile.email}`;
+  const text = `${profile.summary}\n\nSelected projects:\n${featuredProjects}\n\nAI-assisted applications: Property Finance App, AFL Arena, and B2B Leads Generator.\n\nPortfolio: ${profile.portfolio}\nGitHub: ${profile.github}\nEmail: ${profile.email}`;
 
   try {
     await navigator.clipboard.writeText(text);
@@ -407,9 +377,9 @@ async function copySummary() {
 }
 
 function bindEvents() {
-  window.addEventListener("scroll", () => {
-    elements.header.classList.toggle("is-scrolled", window.scrollY > 20);
-  });
+  window.addEventListener("scroll", updateHeaderState);
+  window.addEventListener("hashchange", updateHeaderState);
+  updateHeaderState();
 
   elements.filters.addEventListener("click", (event) => {
     const button = event.target.closest("[data-filter]");

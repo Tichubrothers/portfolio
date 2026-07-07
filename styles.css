@@ -339,6 +339,10 @@ button {
   padding: clamp(56px, 9vw, 100px) 0;
 }
 
+.section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
 .section--intro {
   padding: clamp(34px, 5vw, 54px) 0;
   background: #efe7d9;
@@ -479,7 +483,15 @@ button {
 }
 
 .project-count {
+  margin: 0 0 8px;
+}
+
+.portfolio-note {
+  max-width: 760px;
   margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 .projects-grid {
@@ -571,6 +583,20 @@ button {
   --visual-pattern: linear-gradient(135deg, rgba(215, 138, 31, 0.2) 0 12px, transparent 12px 24px);
 }
 
+.project-card[data-tone="blockchain"] {
+  --accent: #6d5bd0;
+  --accent-alt: var(--teal);
+  --visual-bg: #eeedf6;
+  --visual-pattern: radial-gradient(circle at 72% 34%, rgba(109, 91, 208, 0.2) 0 30px, transparent 31px);
+}
+
+.project-card[data-tone="mobile"] {
+  --accent: #c45373;
+  --accent-alt: var(--green);
+  --visual-bg: #f4ecef;
+  --visual-pattern: linear-gradient(90deg, rgba(196, 83, 115, 0.18) 0 2px, transparent 2px 24px);
+}
+
 .project-card__body {
   display: flex;
   flex: 1;
@@ -586,6 +612,13 @@ button {
   gap: 12px;
 }
 
+.project-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 0;
+}
+
 .project-card__badge,
 .case-tag {
   display: inline-flex;
@@ -599,6 +632,12 @@ button {
   font-size: 0.72rem;
   font-weight: 850;
   text-transform: uppercase;
+}
+
+.project-card__badge--ai {
+  color: #8a5210;
+  border-color: rgba(215, 138, 31, 0.36);
+  background: rgba(215, 138, 31, 0.12);
 }
 
 .project-card h3 {
