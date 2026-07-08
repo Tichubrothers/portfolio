@@ -62,7 +62,7 @@ const projects = [
       "A lead-generation system that collects, parses, stores, and serves daily B2B opportunities across Australia.",
     impact:
       "Generates hundreds of daily business leads and makes them usable from a SQL-backed workflow.",
-    stack: ["Automation", "SQL", "APIs", "Parsing"],
+    stack: ["Automation", "SQL", "APIs", "Web scraping"],
     links: [{label: "Private Github Repo", href: "https://github.com/Tichubrothers/LeadsCrawler"}],
   },
   {
@@ -74,7 +74,7 @@ const projects = [
       "Quantitative and arbitrage trading bots using Node.js, Microsoft Excel, MetaTrader 5, and .MQL5 scripts.",
     impact:
       "Uses automation and real-time data to identify market inefficiency opportunities.",
-    stack: ["Node.js", "Excel", ".MQL5", "Web scraping"],
+    stack: ["Data Analysis", "Node.js", "Excel", ".MQL5", "Web scraping"],
     links: [{ label: "Private Github Repo and Excel Spreadsheets", href: "https://github.com/Tichubrothers/cfd-trading-bots" }],
   },
   {
