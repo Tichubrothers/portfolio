@@ -267,6 +267,317 @@ img {
   background: var(--panel-strong);
 }
 
+.project-item:focus {
+  outline: 2px solid rgba(126, 184, 247, 0.42);
+  outline-offset: 3px;
+}
+
+.project-preview {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 8px;
+  max-height: 0;
+  margin-top: -8px;
+  padding: 0 8px;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  background: rgba(16, 19, 26, 0.94);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translateY(-8px);
+  transition:
+    max-height 220ms ease,
+    margin-top 220ms ease,
+    opacity 180ms ease,
+    padding 220ms ease,
+    transform 180ms ease;
+}
+
+.project-item:hover .project-preview,
+.project-item:focus-within .project-preview {
+  max-height: 360px;
+  margin-top: 0;
+  padding: 8px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.project-preview--wide,
+.project-preview--phone,
+.project-preview--media {
+  align-content: center;
+}
+
+.project-preview--stack {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.project-preview--media .preview-frame--image {
+  aspect-ratio: 16 / 9;
+}
+
+.project-preview--media .preview-frame--video {
+  width: min(142px, 100%);
+  aspect-ratio: 9 / 16;
+  justify-self: center;
+}
+
+.preview-frame {
+  position: relative;
+  display: grid;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.045);
+}
+
+.project-preview--wide .preview-frame {
+  aspect-ratio: 16 / 9;
+}
+
+.project-preview--stack .preview-frame {
+  aspect-ratio: 16 / 9;
+}
+
+.project-preview--phone .preview-frame {
+  width: min(142px, 100%);
+  max-height: 100%;
+  aspect-ratio: 9 / 16;
+  justify-self: center;
+}
+
+.preview-frame img,
+.preview-frame video {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.preview-frame video {
+  display: block;
+  background: #05080d;
+}
+
+.preview-frame figcaption {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  max-width: calc(100% - 16px);
+  padding: 4px 7px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  color: #eef4ff;
+  background: rgba(7, 10, 16, 0.72);
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.preview-fallback {
+  display: none;
+  place-self: center;
+  max-width: calc(100% - 24px);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.preview-fallback small {
+  display: block;
+  margin-top: 6px;
+  color: var(--soft);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace, monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.preview-frame.is-missing {
+  min-height: 58px;
+}
+
+.preview-frame.is-missing .preview-fallback {
+  display: grid;
+}
+
+.github-card {
+  padding: 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: rgba(7, 10, 16, 0.38);
+}
+
+.github-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.github-card__header .section__eyebrow {
+  margin-bottom: 6px;
+}
+
+.github-card__header h2 {
+  margin: 0;
+  font-size: clamp(1.24rem, 3vw, 1.74rem);
+}
+
+.github-card__header a,
+.github-calendar__footer a {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.github-card__header a:hover,
+.github-calendar__footer a:hover {
+  color: var(--blue);
+}
+
+.github-calendar {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 2px 0 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(126, 184, 247, 0.36) transparent;
+}
+
+.github-months {
+  display: grid;
+  grid-template-columns: repeat(var(--github-weeks), 10px);
+  gap: 4px;
+  min-width: 738px;
+  margin: 0 0 6px 46px;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.github-calendar__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.github-days {
+  display: grid;
+  grid-template-rows: repeat(7, 10px);
+  gap: 4px;
+  width: 34px;
+  color: var(--ink);
+  font-size: 0.76rem;
+  line-height: 1;
+}
+
+.github-days span:nth-child(1) {
+  grid-row: 2;
+}
+
+.github-days span:nth-child(2) {
+  grid-row: 4;
+}
+
+.github-days span:nth-child(3) {
+  grid-row: 6;
+}
+
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--github-weeks), 10px);
+  grid-template-rows: repeat(7, 10px);
+  gap: 4px;
+  min-width: 738px;
+}
+
+.github-cell {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: #161b22;
+}
+
+.github-cell[data-level="1"] {
+  background: #0e4429;
+}
+
+.github-cell[data-level="2"] {
+  background: #006d32;
+}
+
+.github-cell[data-level="3"] {
+  background: #26a641;
+}
+
+.github-cell[data-level="4"] {
+  background: #39d353;
+}
+
+.github-calendar__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 784px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.github-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (min-width: 1200px) {
+  .project-item {
+    overflow: visible;
+  }
+
+  .project-preview {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 16px);
+    z-index: 4;
+    width: min(420px, calc((100vw - 860px) / 2 - 24px));
+    max-height: none;
+    margin-top: 0;
+    padding: 8px;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(-18px);
+  }
+
+  .project-item:hover .project-preview,
+  .project-item:focus-within .project-preview {
+    max-height: none;
+    margin-top: 0;
+    padding: 8px;
+    transform: translateX(0);
+  }
+
+  .project-preview--phone .preview-frame {
+    width: min(240px, 72%);
+  }
+
+  .project-preview--media .preview-frame--video {
+    width: min(190px, 72%);
+  }
+}
+
 .project-meta {
   display: grid;
   align-content: start;
@@ -451,5 +762,9 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 6px 10px;
+  }
+
+  .project-preview {
+    width: min(220px, calc(100% - 24px));
   }
 }
