@@ -5,226 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Steven Cheong portfolio: property finance, automated content, lead generation, trading bots, blockchain, and mobile apps."
+      content="Steven Cheong portfolio: selected software projects across finance, automation, trading, blockchain, and mobile apps."
     />
-    <meta name="theme-color" content="#111827" />
-    <meta property="og:title" content="Steven Cheong | App Portfolio" />
+    <meta name="theme-color" content="#10131a" />
+    <meta property="og:title" content="Steven Cheong | Portfolio" />
     <meta
       property="og:description"
-      content="A focused portfolio of apps spanning finance, automation, trading, blockchain, and mobile development."
+      content="A simple index of selected apps, systems, and automation projects."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tichubrothers.github.io/portfolio/" />
     <meta property="og:image" content="assets/portfolio-hero.png" />
-    <title>Steven Cheong | App Portfolio</title>
+    <title>Steven Cheong | Portfolio</title>
     <link rel="canonical" href="https://tichubrothers.github.io/portfolio/" />
     <link rel="preload" href="assets/portfolio-hero.png" as="image" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header" data-site-header>
-      <a class="brand-mark" href="#top" aria-label="Steven Cheong portfolio home">
-        <span class="brand-mark__glyph">SC</span>
-        <span>
-          <strong>Steven Cheong</strong>
-          <span>App Portfolio</span>
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#evidence">Evidence</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <a class="skip-link" href="#projects">Skip to projects</a>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <picture class="hero__image" aria-hidden="true">
-          <img src="assets/portfolio-hero.png" alt="" />
-        </picture>
-        <div class="hero__scrim"></div>
-        <div class="hero__content">
-          <p class="eyebrow">Full-stack app builder in Melbourne</p>
-          <h1 id="hero-title">Steven Cheong App Portfolio</h1>
-          <p class="hero__lede">
-            Practical software across property finance, automated AFL content,
-            B2B lead generation, trading bots, blockchain, and mobile apps.
-          </p>
-          <div class="hero__actions" aria-label="Portfolio actions">
-            <a class="button button--primary" href="#projects">View apps</a>
-            <a class="button button--ghost" href="https://github.com/Tichubrothers" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </div>
-          <dl class="hero__stats" aria-label="Portfolio highlights">
-            <div>
-              <dt>Domains</dt>
-              <dd>6</dd>
-            </div>
-            <div>
-              <dt>Selected builds</dt>
-              <dd>6</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd>Apps that solve real workflows</dd>
-            </div>
-          </dl>
+    <main class="page">
+      <header class="profile" id="top">
+        <img
+          class="profile__image"
+          src="assets/portfolio-hero.png"
+          alt="Collage of app dashboards and automation interfaces"
+        />
+        <h1>Steven Cheong</h1>
+        <p class="profile__line">Fullstack app developer - Melbourne</p>
+        <p class="profile__intro">
+          Practical software across automation for B2B lead generation, trading bots, financial analysis, automated social media content
+          and mobile apps.
+        </p>
+        <nav class="link-row" aria-label="Profile links">
+          <a href="mailto:stevencheong1@gmail.com">Email</a>
+          <a href="https://github.com/Tichubrothers" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section__heading">
+          <p class="section__eyebrow">Selected works</p>
+          <h2 id="projects-title">Apps, systems, and product foundations</h2>
+        </div>
+
+        <div class="filters" data-filters aria-label="Filter projects"></div>
+        <p class="project-count" data-project-count aria-live="polite"></p>
+        <ul class="project-list" data-projects></ul>
+      </section>
+
+      <section class="section section--split" aria-labelledby="strengths-title">
+        <div class="section__heading">
+          <p class="section__eyebrow">Focus</p>
+          <h2 id="strengths-title">Where the work is strongest</h2>
+        </div>
+        <div class="note-grid">
+          <article>
+            <h3>Product systems</h3>
+            <p>Turns messy workflows into structured dashboards, data models, and operational checks.</p>
+          </article>
+          <article>
+            <h3>Finance and risk logic</h3>
+            <p>Comfortable with serviceability, cash-flow modelling, lending metrics, and scenarios.</p>
+          </article>
+          <article>
+            <h3>Automation depth</h3>
+            <p>Builds crawlers, posting scripts, data pipelines, trading bots, APIs, and repeatable tools.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section section--intro" aria-labelledby="intro-title">
-        <div class="section__inner intro-grid">
-          <div>
-            <p class="eyebrow">What this portfolio shows</p>
-            <h2 id="intro-title">Product judgment backed by working code.</h2>
-          </div>
-          <p>
-            The projects below are selected to help an employer quickly assess
-            scope, technical range, and delivery style. This portfolio includes
-            only the apps listed in the CV summary. Each card opens into a
-            concise case study with stack, implementation evidence, and what to
-            inspect next.
-          </p>
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="section__heading">
+          <p class="section__eyebrow">Next conversation</p>
+          <h2 id="contact-title">Project walkthroughs available on request.</h2>
         </div>
-      </section>
-
-      <section class="section section--projects" id="projects" aria-labelledby="projects-title">
-        <div class="section__inner">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Selected work</p>
-              <h2 id="projects-title">Apps, systems, and product foundations</h2>
-            </div>
-            <button class="button button--secondary" type="button" data-copy-summary>
-              Copy CV summary
-            </button>
-          </div>
-
-          <div class="portfolio-tools" aria-label="Project filters">
-            <label class="search-field">
-              <span class="search-field__icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Search projects</span>
-              <input
-                type="search"
-                data-search
-                placeholder="Search projects or stack"
-                autocomplete="off"
-              />
-            </label>
-            <div class="filter-row" data-filters aria-label="Filter by domain"></div>
-          </div>
-
-          <div class="project-count" data-project-count aria-live="polite"></div>
-          <p class="portfolio-note">
-            AI-assisted labels indicate applications developed with assistance from
-            ChatGPT 5.4, ChatGPT 5.5, and/or Claude Opus 4.6.
-          </p>
-          <div class="projects-grid" data-projects></div>
-        </div>
-      </section>
-
-      <section class="section section--evidence" id="evidence" aria-labelledby="evidence-title">
-        <div class="section__inner">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Hiring signal</p>
-              <h2 id="evidence-title">Where the work is strongest</h2>
-            </div>
-          </div>
-          <div class="evidence-grid">
-            <article>
-              <h3>Product systems</h3>
-              <p>
-                Converts messy workflows into structured routes, dashboards,
-                data models, and operational checks.
-              </p>
-            </article>
-            <article>
-              <h3>Finance and risk logic</h3>
-              <p>
-                Comfortable with serviceability, cash-flow modelling,
-                quantitative strategy, lending metrics, and scenario analysis.
-              </p>
-            </article>
-            <article>
-              <h3>Automation depth</h3>
-              <p>
-                Builds crawlers, social posting scripts, data pipelines,
-                trading bots, API workflows, and repeatable automations.
-              </p>
-            </article>
-            <article>
-              <h3>Launch and monetisation</h3>
-              <p>
-                Has launched web, blockchain, iOS, Android, and monetised app
-                experiences across public platforms.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--timeline" aria-labelledby="timeline-title">
-        <div class="section__inner">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Build pattern</p>
-              <h2 id="timeline-title">How I tend to ship</h2>
-            </div>
-          </div>
-          <div class="timeline">
-            <article>
-              <span>01</span>
-              <h3>Model the workflow</h3>
-              <p>Start with entities, decision points, user roles, and evidence needed for real use.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Build a useful surface</h3>
-              <p>Prioritize dashboards, forms, filters, import/export, and operator feedback loops.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Connect the hard parts</h3>
-              <p>Add adapters, APIs, crawlers, AI providers, job queues, and validation boundaries.</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Make it explainable</h3>
-              <p>Document limits, next integrations, tests, and the path from prototype to production.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--contact" id="contact" aria-labelledby="contact-title">
-        <div class="section__inner contact-band">
-          <div>
-            <p class="eyebrow">Available for the next conversation</p>
-            <h2 id="contact-title">Want the short version for a role?</h2>
-            <p>
-              I can walk through any project, explain the architecture, and discuss
-              how the same approach applies to a business analyst, product, data,
-              automation, or software delivery role.
-            </p>
-          </div>
-          <div class="contact-actions">
-            <a class="button button--primary" href="mailto:tichubrothers@gmail.com">Email Steven</a>
-            <a class="button button--secondary" href="https://github.com/Tichubrothers" target="_blank" rel="noreferrer">
-              GitHub profile
-            </a>
-          </div>
+        <p>
+          I can walk through architecture, code, data flow, and delivery tradeoffs
+          for any project listed here.
+        </p>
+        <div class="link-row link-row--left" aria-label="Contact links">
+          <a href="mailto:stevencheong1@gmail.com">Email Steven</a>
+          <a href="https://github.com/Tichubrothers" target="_blank" rel="noreferrer">GitHub profile</a>
         </div>
       </section>
     </main>
 
-    <dialog class="case-dialog" data-dialog>
-      <button class="dialog-close" type="button" data-close-dialog aria-label="Close case study"></button>
-      <article data-dialog-content></article>
-    </dialog>
-
-    <div class="toast" data-toast role="status" aria-live="polite"></div>
     <script src="scripts.js" defer></script>
   </body>
 </html>
